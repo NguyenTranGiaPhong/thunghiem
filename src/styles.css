@@ -1,0 +1,161 @@
+/* Định dạng mỗi phần khách sạn */
+.hotel-item {
+  display: flex;
+  flex-direction: row; /* Thay đổi thành hàng ngang */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  padding: 25px;
+  gap: 20px; /* Tạo khoảng cách giữa các thành phần */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Phần chi tiết khách sạn */
+.hotel-details {
+  display: flex;
+  flex-direction: column; /* Chi tiết của từng khách sạn xếp dọc */
+  flex: 2; /* Chiếm 2 phần trong tổng không gian */
+  gap: 10px;
+}
+
+.hotel-details img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Thông tin bên trái: Thanh toán */
+.hotel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1; /* Chiếm 1 phần trong không gian */
+  gap: 10px;
+}
+
+.hotel-info .price {
+  font-size: 18px;
+  color: #27ae60; /* Xanh lá đậm */
+  font-weight: 600;
+}
+
+.hotel-info button {
+  padding: 12px 25px;
+  background-color: #2980b9; /* Màu xanh dương nhấn mạnh */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hotel-info button:hover {
+  background-color: #1f618d;
+  transform: scale(1.05);
+}
+
+/* Thông tin bên phải: Đánh giá */
+.hotel-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1; /* Chiếm 1 phần trong không gian */
+  gap: 10px;
+}
+
+.hotel-rating .rating {
+  font-size: 18px;
+  color: #f39c12; /* Vàng nhấn mạnh */
+  font-weight: 600;
+}
+
+/* Tạo khoảng cách giữa các phần */
+.hotel-item p {
+  margin: 10px 0;
+}
+/* Phần dưới (container chính) */
+.info-section {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ không gian */
+  justify-content: space-between;
+  gap: 20px; /* Tạo khoảng cách giữa các khối */
+  margin-top: 40px;
+}
+
+/* Khối con trong phần dưới */
+.info-box {
+  flex: 1; /* Mỗi khối chiếm khoảng không gian bằng nhau */
+  min-width: 250px; /* Đảm bảo khối không quá nhỏ */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề của mỗi khối */
+.info-box h3 {
+  font-size: 18px;
+  color: #34495e;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 5px;
+}
+
+/* Nội dung trong mỗi khối */
+.info-box p,
+.info-box label,
+.info-box input,
+.info-box button {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 10px 0;
+}
+
+.info-box input,
+.info-box button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.info-box button {
+  background-color: #2980b9; /* Màu xanh nút */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-box button:hover {
+  background-color: #1f618d;
+}
+
+/* Chỉnh sửa riêng cho nút hoặc trường nhập */
+.info-box input[type="text"],
+.info-box input[type="email"] {
+  margin-bottom: 15px;
+}
